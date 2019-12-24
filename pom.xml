@@ -1,0 +1,37 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.testgroup</groupId>
+    <artifactId>testapp-bom</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>testapp-bom</name>
+    <description>parent pom</description>
+	
+	<properties>
+		<app1.version>1.0.0-SNAPSHOT</app1.version>
+		<app2.version>1.0.0-SNAPSHOT</app2.version>
+		<app3.version>1.0.0-SNAPSHOT</app3.version>
+	</properties>
+	
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.testgroup</groupId>
+                <artifactId>app1</artifactId>
+                <version>${app1.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.testgroup</groupId>
+                <artifactId>app2</artifactId>
+                <version>${app2.version}</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.testgroup</groupId>
+                <artifactId>app3</artifactId>
+                <version>${app3.version}</version>
+                <scope>compile</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
